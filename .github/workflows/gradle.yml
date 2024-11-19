@@ -35,4 +35,4 @@ jobs:
 
     # Step 5: Execute Tests
     - name: Run Tests
-      run: ./gradlew test
+      run: ./gradlew clean test
