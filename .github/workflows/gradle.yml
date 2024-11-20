@@ -35,4 +35,11 @@ jobs:
 
     # Step 5: Execute Tests
     - name: Run Tests
-      run: ./gradlew clean test
+      run: ./gradlew test
+
+    - name: Archive test result
+      uses: action/upload-artifact@4.3.0
+      if: always()
+      with:
+       name: cucumber
+       path: reports/cucumber.html
